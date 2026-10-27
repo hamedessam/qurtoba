@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Qurtoba Translation Services: accurate, reliable multilingual solutions for businesses and translation agencies worldwide.">
+<title>Qurtoba Translation Services</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&family=Public+Sans:wght@400;500;600&family=Amiri:wght@400;700&display=swap">
+<style>
+html{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}
+
+/* Layout concept: navy hero with an arch motif, a facts strip overlapping it, then alternating light and navy bands. */
+:root{
+  --sw:0px;
+  /* comparison bar */
+  --ui-bg:#E9ECF1;--ui-fg:#141A25;--ui-mut:#5A667A;--ui-line:#CBD2DD;--ui-seg:#D8DDE6;--ui-on:#141A25;--ui-onfg:#FFFFFF;--ui-note:#F4F6F9;
+  /* A: premium corporate (placeholder palette) */
+  --a-bg:#F3F5F8;--a-surf:#FFFFFF;--a-ink:#0F2540;--a-mut:#505F76;--a-line:#D9E0EA;--a-navy:#0F2540;--a-navy2:#1A3C66;--a-onnavy:#F2F5FA;--a-onnavy-mut:#B4C1D6;--a-brass:#86621B;--a-brasslt:#D4B06A;--a-btn-bg:#0F2540;--a-btn-fg:#FFFFFF;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --ui-bg:#0B0F17;--ui-fg:#E7EBF3;--ui-mut:#98A5BA;--ui-line:#232C3C;--ui-seg:#161D2B;--ui-on:#E7EBF3;--ui-onfg:#0B0F17;--ui-note:#101622;
+  --a-bg:#0A1626;--a-surf:#102039;--a-ink:#E8EEF6;--a-mut:#A2B2C7;--a-line:#22385A;--a-navy:#0E2441;--a-navy2:#163A66;--a-brass:#D4B06A;--a-btn-bg:#D4B06A;--a-btn-fg:#0A1626;
+  color-scheme:dark}}
+:root[data-theme="dark"]{
+  --ui-bg:#0B0F17;--ui-fg:#E7EBF3;--ui-mut:#98A5BA;--ui-line:#232C3C;--ui-seg:#161D2B;--ui-on:#E7EBF3;--ui-onfg:#0B0F17;--ui-note:#101622;
+  --a-bg:#0A1626;--a-surf:#102039;--a-ink:#E8EEF6;--a-mut:#A2B2C7;--a-line:#22385A;--a-navy:#0E2441;--a-navy2:#163A66;--a-brass:#D4B06A;--a-btn-bg:#D4B06A;--a-btn-fg:#0A1626;
+  color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--a-bg);color:var(--a-ink);font:14px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--a-navy);z-index:60}
+.w{width:100%;max-width:1240px;margin-inline:auto;padding-inline:max(16px,env(safe-area-inset-left,0px)) max(16px,env(safe-area-inset-right,0px))}
+a,button,summary,input,select{-webkit-tap-highlight-color:transparent}
+:focus-visible{outline:2px solid currentColor;outline-offset:3px}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+/* ---------- shared bits ---------- */
+.dir{overflow-x:clip}
+.dir section[id]{scroll-margin-top:140px}
+.dir p{margin:0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:.75em 1.4em;font:inherit;font-weight:600;line-height:1.2;text-decoration:none;cursor:pointer;border:1px solid transparent;text-align:center}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.ico{width:26px;height:26px;stroke:currentColor;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.navbtn{display:none;margin-left:auto;width:44px;height:44px;background:transparent;color:inherit;cursor:pointer;align-items:center;justify-content:center;flex-direction:column;gap:5px;border:1px solid var(--n-line,currentColor)}
+.navbtn i{display:block;width:20px;height:2px;background:currentColor}
+.faq details{border-top:var(--f-lw,1px) solid var(--f-line)}
+.faq details:last-child{border-bottom:var(--f-lw,1px) solid var(--f-line)}
+.faq summary{list-style:none;cursor:pointer;position:relative;padding:20px 44px 20px 0;font-family:var(--f-head);font-size:var(--f-qsize);font-weight:var(--f-qw);line-height:1.3}
+.faq summary::-webkit-details-marker{display:none}
+.faq details p{padding:0 44px 24px 0;color:var(--f-mut);max-width:64ch}
+.crow{display:grid;grid-template-columns:84px minmax(0,1fr) auto;gap:12px;align-items:center;padding:14px 0;border-top:var(--f-lw,1px) solid var(--f-line)}
+.cl{color:var(--f-mut);font-size:.875rem}
+.cv{font-weight:600;overflow-wrap:anywhere}
+.cact{display:flex;gap:8px}
+.cact button,.cact a{font:inherit;font-size:.8125rem;font-weight:500;padding:7px 12px;border:1px solid var(--f-line);border-radius:var(--f-r);background:transparent;color:var(--f-ink);text-decoration:none;cursor:pointer}
+.soc{display:flex;flex-wrap:wrap;gap:8px 20px;padding-top:16px;border-top:var(--f-lw,1px) solid var(--f-line)}
+.soc a{color:var(--f-ink);font-weight:600}
+.qf{display:grid;gap:14px;background:var(--f-card);border:var(--f-lw,1px) solid var(--f-line);border-radius:var(--f-r);padding:clamp(20px,3vw,32px);color:var(--f-ink);min-width:0}
+.qf h3{margin:0;font-family:var(--f-head)}
+.qf .hint{color:var(--f-mut);font-size:.9375rem}
+.qf label{display:grid;gap:6px;font-size:.875rem;font-weight:600}
+.qf input,.qf select{font:inherit;font-weight:400;color:var(--f-ink);background:var(--f-field);border:1px solid var(--f-line);border-radius:var(--f-r);padding:11px 12px;min-height:44px;width:100%;min-width:0}
+.qf input[type=file]{padding:9px 10px}
+.qf .two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.qf .fstatus{font-size:.875rem;color:var(--f-mut);min-height:1.4em}
+.qf .btn{justify-self:start}
+
+/* ---------- A. Premium Corporate ---------- */
+.dA{background:var(--a-bg);color:var(--a-ink);font:16px/1.65 "Public Sans",system-ui,sans-serif;
+  --f-card:var(--a-surf);--f-field:var(--a-bg);--f-ink:var(--a-ink);--f-mut:var(--a-mut);--f-line:var(--a-line);--f-r:4px;--f-head:Newsreader,Georgia,serif;--f-qsize:1.2rem;--f-qw:500;--n-line:var(--a-line)}
+.dA h1,.dA h2,.dA h3{font-family:Newsreader,Georgia,"Times New Roman",serif;font-weight:500;margin:0;text-wrap:balance}
+.dA h1{font-size:clamp(2.4rem,5.2vw,4.1rem);line-height:1.07;letter-spacing:-.01em}
+.dA h2{font-size:clamp(1.9rem,3.2vw,2.7rem);line-height:1.15}
+.dA h3{font-size:1.3rem;line-height:1.25}
+.dA .sec{padding-block:clamp(56px,8vw,104px)}
+.dA .btn{background:var(--a-btn-bg);color:var(--a-btn-fg);border-radius:4px}
+.dA .btn.gold{background:var(--a-brasslt);color:#0F2540}
+.dA .btn.ghost{background:transparent;color:var(--a-onnavy);border-color:rgba(255,255,255,.38)}
+.dA .dk :focus-visible{outline-color:var(--a-brasslt)}
+.dA .a-util{background:var(--a-navy);color:var(--a-onnavy-mut);font-size:.8125rem}
+.dA .a-util .w{display:flex;justify-content:space-between;gap:16px;padding-block:8px}
+.dA .a-nav{position:sticky;top:calc(var(--sw) + env(safe-area-inset-top,0px));z-index:40;background:var(--a-surf);border-bottom:1px solid var(--a-line)}
+.dA .a-navin{display:flex;align-items:center;gap:28px;min-height:70px}
+.dA .a-logo{display:flex;align-items:center;gap:10px;color:var(--a-ink);text-decoration:none}
+.dA .a-logo svg{color:var(--a-brass)}
+.dA .a-lt b{display:block;font-family:Newsreader,Georgia,serif;font-weight:600;font-size:1.5rem;line-height:1}
+.dA .a-lt small{display:block;margin-top:3px;font-size:.6875rem;color:var(--a-mut);letter-spacing:.04em}
+.dA .a-links{display:flex;gap:26px;margin-left:auto;font-size:.9375rem}
+.dA .a-links a{color:var(--a-ink);text-decoration:none;padding-block:6px;border-bottom:1px solid transparent}
+.dA .a-links a:hover{border-color:var(--a-brass)}
+.dA .a-hero{background:linear-gradient(160deg,var(--a-navy),var(--a-navy2));color:var(--a-onnavy);padding-block:clamp(48px,7vw,92px) clamp(96px,11vw,148px)}
+.dA .a-herogrid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(24px,5vw,72px);align-items:center}
+.dA .a-tag{margin-top:22px;color:var(--a-brasslt);font-family:Newsreader,Georgia,serif;font-style:italic;font-size:1.3rem;line-height:1.35}
+.dA .a-lead{margin-top:18px;color:var(--a-onnavy-mut);max-width:58ch}
+.dA .a-vis svg{display:block;width:100%;max-width:370px;height:auto;margin-inline:auto}
+.dA .a-vis .s1{fill:none;stroke:var(--a-brasslt);stroke-width:1.5;opacity:.45}
+.dA .a-vis .s2{fill:none;stroke:var(--a-brasslt);stroke-width:1.5;opacity:.75}
+.dA .a-vis .s3{fill:rgba(255,255,255,.06);stroke:var(--a-brasslt);stroke-width:2}
+.dA .a-vis .ar{font-family:Amiri,"Noto Naskh Arabic",serif;font-size:58px;fill:var(--a-brasslt)}
+.dA .a-vis .la{font-family:Newsreader,Georgia,serif;font-style:italic;font-size:26px;fill:var(--a-onnavy)}
+.dA .a-vis .gl text{font-family:Newsreader,Georgia,serif;font-size:34px;fill:var(--a-onnavy-mut);opacity:.75}
+.dA .a-facts{margin-top:-68px;position:relative;z-index:2}
+.dA .a-fgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));background:var(--a-surf);border:1px solid var(--a-line);border-radius:6px;box-shadow:0 22px 44px -28px rgba(10,24,45,.55)}
+.dA .a-fact{padding:28px 32px}
+.dA .a-fact+.a-fact{border-left:1px solid var(--a-line)}
+.dA .a-fact b{display:block;font-family:Newsreader,Georgia,serif;font-size:2.5rem;font-weight:500;line-height:1;color:var(--a-brass)}
+.dA .a-fact span{display:block;margin-top:10px;color:var(--a-mut);font-size:.9375rem}
+.dA .a-two{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(24px,6vw,88px);align-items:start}
+.dA .a-quote{margin-top:20px;font-family:Newsreader,Georgia,serif;font-style:italic;font-size:clamp(1.45rem,2.5vw,2rem);line-height:1.3;color:var(--a-ink)}
+.dA .a-body{max-width:64ch}
+.dA .a-body p+p{margin-top:1em}
+.dA .a-band{background:var(--a-surf);border-block:1px solid var(--a-line)}
+.dA .a-navy{background:var(--a-navy);color:var(--a-onnavy)}
+.dA .a-navy p{color:var(--a-onnavy-mut)}
+.dA .a-mv{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(32px,6vw,96px)}
+.dA .a-mv h2{margin-bottom:18px;color:var(--a-brasslt)}
+.dA .a-mv p+p{margin-top:1em}
+.dA .a-vals{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;margin-top:40px}
+.dA .a-val{background:var(--a-surf);border:1px solid var(--a-line);border-radius:6px;padding:26px}
+.dA .a-val h3{font-size:1.2rem;margin-bottom:10px}
+.dA .a-val p{color:var(--a-mut);font-size:.9375rem}
+.dA .a-val.close{background:var(--a-navy);border-color:transparent;display:flex;align-items:flex-end}
+.dA .a-val.close p{font-family:Newsreader,Georgia,serif;font-size:1.25rem;line-height:1.35;color:var(--a-onnavy)}
+.dA .a-sintro{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(16px,4vw,56px);margin-top:20px;color:var(--a-mut)}
+.dA .a-svc{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;margin-top:40px}
+.dA .a-card{display:flex;flex-direction:column;gap:12px;background:var(--a-surf);border:1px solid var(--a-line);border-radius:6px;padding:28px 24px}
+.dA .a-ico{width:52px;height:52px;border-radius:50%;background:var(--a-navy);color:var(--a-brasslt);display:grid;place-items:center}
+.dA .a-card .d{color:var(--a-mut);font-size:.9375rem}
+.dA .a-card .ex{margin-top:auto;padding-top:14px;border-top:1px solid var(--a-line);font-size:.875rem;color:var(--a-mut)}
+.dA .a-card .ex b{color:var(--a-ink)}
+.dA .a-why{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:36px 40px;margin-top:40px}
+.dA .a-why div{display:grid;grid-template-columns:28px minmax(0,1fr);gap:4px 14px}
+.dA .a-why .ico{color:var(--a-brass);width:24px;height:24px;margin-top:2px}
+.dA .a-why p{grid-column:2;color:var(--a-mut);font-size:.9375rem}
+.dA .a-cta{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:32px;align-items:center}
+.dA .a-cta h2{color:var(--a-brasslt);margin-bottom:14px}
+.dA .a-cta .strong{margin-top:14px;color:var(--a-onnavy);font-weight:600}
+.dA .a-cta .btns{margin:0}
+.dA .a-faqgrid{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:clamp(24px,6vw,88px);align-items:start}
+.dA .a-faqgrid h2{position:sticky;top:150px}
+.dA .faq summary::after{content:"";position:absolute;right:6px;top:50%;width:9px;height:9px;border-right:2px solid var(--a-brass);border-bottom:2px solid var(--a-brass);transform:translateY(-70%) rotate(45deg);transition:transform .2s}
+.dA .faq details[open] summary::after{transform:translateY(-30%) rotate(-135deg)}
+.dA .a-contact{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(24px,5vw,72px);align-items:start}
+.dA .a-contact h3.sm{margin:28px 0 6px;font-size:1.15rem}
+.dA .a-contact .cbox{margin-top:22px}
+.dA .a-foot{background:var(--a-navy);color:var(--a-onnavy-mut);font-size:.875rem}
+.dA .a-foot .w{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px 24px;padding-block:28px}
+.dA .a-foot b{font-family:Newsreader,Georgia,serif;color:var(--a-onnavy);font-size:1.2rem;font-weight:600}
+
+/* ---------- responsive ---------- */
+@media (max-width:1100px){
+  .dA .a-svc,.dA .a-vals{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .dA .a-why{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .ngrid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:900px){
+  .dA .a-links,.dB .b-links,.dC .c-links{display:none;position:absolute;left:0;right:0;top:100%;flex-direction:column;gap:0;margin:0;padding:6px max(16px,env(safe-area-inset-right,0px)) 12px max(16px,env(safe-area-inset-left,0px))}
+  .dA .a-links{background:var(--a-surf);border-bottom:1px solid var(--a-line)}
+  .dA .a-links a,.dB .b-links a,.dC .c-links a{padding:14px 0;font-size:1.0625rem}
+  .nav.open .a-links,.nav.open .b-links,.nav.open .c-links{display:flex}
+  .navbtn{display:inline-flex}
+  .dA .a-navcta,.dB .b-navcta,.dC .c-navcta{display:none}
+  .dB .b-navin,.dA .a-navin,.dC .c-navin{gap:16px}
+  .dA .a-herogrid,.dB .b-hgrid,.dA .a-two,.dA .a-faqgrid,.dA .a-contact,.dB .b-row,.dB .b-contact,.dC .c-hrow,.dC .c-intro,.dC .c-cgrid{grid-template-columns:minmax(0,1fr)}
+  .dA .a-vis svg{max-width:260px}
+  .dA .a-faqgrid h2,.dB .b-row>h2{position:static}
+  .dA .a-cta,.dB .b-ctap{grid-template-columns:minmax(0,1fr)}
+  .dA .a-mv,.dC .c-mv,.dB .b-two,.dA .a-sintro{grid-template-columns:minmax(0,1fr)}
+  .dB .b-svc,.dB .b-vals{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:760px){
+  .dA .a-fgrid{grid-template-columns:minmax(0,1fr)}
+  .dA .a-fact+.a-fact{border-left:0;border-top:1px solid var(--a-line)}
+  .dA .a-util{display:none}
+  .dA .a-facts{margin-top:-52px}
+}
+@media (max-width:600px){
+  .dA .a-svc,.dA .a-vals,.dA .a-why,.dB .b-why,.dC .c-why{grid-template-columns:minmax(0,1fr)}
+  .qf .two{grid-template-columns:minmax(0,1fr)}
+  .ngrid{grid-template-columns:minmax(0,1fr)}
+  .crow{grid-template-columns:minmax(0,1fr) auto}
+  .crow .cl{grid-column:1/-1}
+}
+@media (max-width:640px){
+  .sw-brand{display:none}
+  .seg{margin-inline:0;flex:1;justify-content:space-between}
+  .seg button{padding:6px 8px;font-size:12.5px;flex:1}
+  .seg .long{display:none}.seg .short{display:inline}
+  .sw .ib{padding:0 10px}
+}
+@media (max-width:420px){.sw .ib.nb span{display:none}.sw .ib.nb::after{content:"i"}}
+</style>
+</head>
+<body>
+<main>
+  <div class="dir dA" id="dA"></div>
+</main>
+
+<script>
+/* ===== Content: taken from the client document (Website_Qurtoba.docx). Shared by all three directions. ===== */
+const EMAIL="Qurtobafortranslation@gmail.com", WA="+201553090650";
+const LINKS={fb:"https://www.facebook.com/qurtoba.translations",li:"https://www.linkedin.com/in/qurtobatranslations",ig:"https://www.instagram.com/qurtobafortranslations/"};
+const D={
+ welcome:"Welcome to Qurtoba Translation Services",
+ years:"Over 10 Years of Excellence. More Than 15 Years of Translation Expertise.",
+ intro:[
+  "At Qurtoba Translation Services, we deliver accurate, reliable, and high-quality multilingual solutions tailored to the needs of businesses and translation agencies worldwide.",
+  "With over 10 years of experience in the translation market, we combine professional project management with the expertise of a highly qualified team of translators, each bringing more than 15 years of professional experience. Our team includes specialists with advanced academic qualifications, including PhD degrees, as well as highly experienced native translators who bring exceptional linguistic proficiency, cultural understanding, and subject-matter expertise to every project.",
+  "From business documents and medical translation to audio, video, and website localization, we are committed to delivering outstanding quality, competitive pricing, and on-time results—without compromising accuracy or professionalism."],
+ close:"At Qurtoba, we don’t just translate words. We deliver meaning, precision, and confidence across languages.",
+ tagline:"Qurtoba Translation Services – Connecting Languages, Bridging Cultures.",
+ about:[
+  "At Qurtoba Translation Services, we believe that effective communication is the foundation of successful business relationships. With over 10 years of experience in the translation industry, we provide professional multilingual solutions designed to help businesses, translation agencies, and organizations communicate confidently across languages and cultures.",
+  "Our strength lies in our highly qualified team of translators, including experienced language professionals with advanced academic qualifications, subject-matter specialists, and native translators with deep linguistic and cultural expertise. Supported by professional project management and a strong commitment to quality, we handle every project with precision, confidentiality, and care.",
+  "From document translation to medical translation, audio and video translation, and website localization, we are dedicated to delivering solutions that meet our clients’ requirements for accuracy, quality, competitive pricing, and timely delivery.",
+  "At Qurtoba, we see every project as an opportunity to build trust, strengthen partnerships, and create lasting value for our clients."],
+ mission:[
+  "Our mission is to deliver accurate, reliable, and high-quality translation solutions that empower businesses and organizations to communicate effectively across languages and borders.",
+  "We are committed to combining linguistic expertise, specialized knowledge, and efficient project management to provide customized services that meet our clients’ needs, respect their deadlines, and offer exceptional value without compromising quality."],
+ vision:[
+  "Our vision is to become a trusted global partner in multilingual communication, recognized for our exceptional quality, professional integrity, and ability to support clients in an increasingly connected world.",
+  "We aspire to build long-term partnerships with translation agencies, businesses, and organizations worldwide by continuously improving our services, expanding our language capabilities, and embracing innovative working practices while keeping human expertise at the heart of our work."],
+ values:[
+  ["Quality & Accuracy","We are committed to delivering translations that preserve the original meaning, context, tone, and terminology. Every project receives the attention it deserves to ensure clarity, consistency, and reliability."],
+  ["Professional Expertise","We value knowledge, experience, and continuous development. Our team brings together qualified translators, native-language professionals, and subject-matter specialists to meet the demands of diverse industries and complex projects."],
+  ["Reliability & Commitment","We understand the importance of deadlines in business. We work diligently to meet agreed delivery schedules, communicate clearly, and provide dependable support throughout every stage of a project."],
+  ["Client-Centered Service","Every client has unique goals and requirements. We listen carefully, adapt our solutions, and strive to build lasting relationships based on trust, responsiveness, and mutual success."],
+  ["Integrity & Confidentiality","We handle client documents and information with professionalism, discretion, and respect. We are committed to maintaining confidentiality and conducting our business with honesty and transparency."],
+  ["Competitive Pricing & Value","We believe professional translation should offer outstanding value. Our goal is to provide competitive, project-based pricing while maintaining the quality and accuracy our clients expect."],
+  ["Collaboration & Continuous Improvement","We believe the best results come from effective teamwork, clear communication, and a commitment to learning. We continuously seek ways to improve our processes, strengthen our capabilities, and deliver better outcomes for our clients."]],
+ valuesClose:"Qurtoba Translation Services — Your Trusted Partner in Professional Multilingual Communication.",
+ svcIntro:[
+  "At Qurtoba Translation Services, we provide comprehensive multilingual solutions tailored to the needs of businesses, translation agencies, and organizations worldwide. Our focus is on delivering accurate, high-quality translations with competitive pricing, fast turnaround times, and reliable project management.",
+  "From documents and medical reports to audio, video, and website content, we help you communicate clearly and confidently across languages and markets."],
+ services:[
+  {i:"doc",t:"Document Translation",d:"We provide professional translation of documents across a wide range of industries and subject areas. Our team works to preserve the original meaning, terminology, formatting, and tone of every document, ensuring clear and accurate communication in the target language.",l:"Examples:",e:"Business documents, reports, contracts, manuals, presentations, correspondence, and corporate materials."},
+  {i:"med",t:"Medical Translation",d:"We offer specialized human medical translation performed by qualified medical doctors with relevant expertise, without using AI or machine translation in the translation process. Our approach prioritizes medical terminology, contextual accuracy, confidentiality, and careful handling of sensitive healthcare information.",l:"Examples:",e:"Medical reports, patient records, clinical trial documents, medical research papers, pharmaceutical documents, and healthcare publications."},
+  {i:"aud",t:"Audio Transcription & Translation",d:"We transform audio content into accurate written text and provide translation into the required target language. Our services help businesses make spoken content accessible across languages while preserving its intended meaning and context.",l:"Examples:",e:"Interviews, meetings, recorded presentations, research interviews, podcasts, and business discussions."},
+  {i:"vid",t:"Video Translation & Subtitling",d:"We help businesses communicate with international audiences through professional video translation and multilingual subtitles. Our service focuses on conveying the original message accurately while adapting language and phrasing to suit the target audience.",l:"Examples:",e:"Corporate videos, training materials, educational videos, interviews, promotional videos, and recorded presentations."},
+  {i:"web",t:"Website Translation & Localization",d:"We help businesses reach international markets by translating and adapting website content for different languages and audiences. Our goal is to preserve your brand voice, communicate your message naturally, and ensure your content is appropriate for the target market.",l:"Examples:",e:"Website pages, product descriptions, service pages, company profiles, landing pages, and digital content."},
+  {i:"pro",t:"Proofreading & Editing",d:"We provide professional proofreading and editing to improve the accuracy, clarity, consistency, and readability of translated content. Our review process focuses on grammar, spelling, terminology, style, and overall language quality while preserving the intended message.",l:"Examples:",e:"Translated documents, reports, presentations, business communications, website content, and publications."},
+  {i:"pm",t:"Multilingual Project Management",d:"We manage translation projects from initial requirements through delivery, coordinating language resources, deadlines, quality reviews, and project requirements. Our structured approach helps clients manage multilingual workloads efficiently while maintaining consistency and clear communication throughout the process.",l:"Our approach includes:",e:"Project coordination, language resource management, terminology consistency, progress monitoring, quality coordination, and on-time delivery."},
+  {i:"multi",t:"Multilingual Translation Solutions",d:"We support businesses and translation agencies with translation services across a wide range of languages and subject areas. Whether you need a single document or a large multilingual project, we coordinate the appropriate resources to meet your language requirements, quality expectations, and deadlines.",l:"Our commitment:",e:"Accurate communication, competitive pricing, responsive project coordination, and dependable delivery."}],
+ why:[
+  ["Quality & Accuracy","Careful attention to meaning, terminology, and context."],
+  ["Competitive Pricing","Cost-effective solutions tailored to project requirements."],
+  ["Fast Turnaround","Efficient coordination to meet agreed deadlines."],
+  ["Professional Project Management","Organized workflows and clear communication."],
+  ["Multilingual Capabilities","Translation support across a wide range of languages."],
+  ["Reliable Partnership","A flexible service provider committed to supporting your ongoing translation needs."]],
+ coop:"Whether you are a translation agency looking for a dependable project partner or a business expanding into international markets, Qurtoba Translation Services is ready to support your multilingual projects.",
+ coopCta:"Contact us today to discuss your requirements and request a quotation.",
+ contactIntro:"Contact Qurtoba Translation Services for a quotation tailored to your translation needs.",
+ faq:[
+  ["What translation services does Qurtoba Translation Services offer?","Qurtoba Translation Services provides a wide range of multilingual solutions, including document translation, medical translation, audio transcription and translation, video translation and subtitling, website translation and localization, and proofreading and editing. We serve businesses, translation agencies, and organizations across various industries."],
+  ["Which languages do you translate?","We provide translation services across a wide range of languages, supported by experienced translators and native-language professionals. Language availability depends on the specific language pair, subject matter, and project requirements. Contact us to confirm availability for your project."],
+  ["How can I request a quotation?","Simply send us your files along with the source and target languages, required services, and preferred deadline. Our team will review your requirements and provide a quotation based on the project's scope, complexity, and turnaround time."],
+  ["How do you calculate translation prices?","Our pricing depends on several factors, including language pair, word count or file duration, subject matter, technical complexity, formatting requirements, and delivery deadline. We aim to offer competitive pricing tailored to each project while maintaining professional quality standards."],
+  ["How long does a translation project take?","Turnaround time depends on the project's size, language pair, subject matter, and complexity. Once we review your requirements, we will confirm an estimated delivery time. For urgent or large-scale projects, we can assess the feasibility of allocating additional resources to meet your deadline."],
+  ["How do you ensure translation quality and accuracy?","We prioritize linguistic accuracy, consistency, and appropriate terminology. Projects are assigned according to language expertise and subject-matter requirements, with review and quality-control steps determined by the nature and scope of each assignment."],
+  ["Do you provide specialized medical translation?","Yes. We offer medical translation for documents such as medical reports, patient records, clinical trial materials, pharmaceutical documents, and medical research papers. Projects are assigned to appropriately qualified professionals with relevant medical or subject-matter expertise, according to the project requirements."],
+  ["Do you use AI or machine translation?","Our approach depends on the service and project requirements. For specialized projects, including medical translation, we can provide human-led translation by qualified professionals without relying on AI or machine translation, where this service is agreed upon. Please specify your requirements when requesting a quotation."],
+  ["Can you handle audio and video translation projects?","Yes. We provide audio transcription and translation, as well as video translation and subtitling. We can assess interviews, meetings, recordings, corporate videos, training materials, and other audiovisual content based on the language, format, duration, and required output."],
+  ["Do you offer website translation and localization?","Yes. We translate and localize website content to help businesses communicate effectively with audiences in different markets. This may include website pages, service descriptions, product information, company profiles, and other digital content."],
+  ["Can you handle large-volume or ongoing projects?","Yes. We can assess large-volume assignments and recurring projects from translation agencies, businesses, and organizations. Project planning, resource allocation, and delivery schedules are agreed upon according to the volume, language combinations, and project specifications."],
+  ["Do you work with translation agencies?","Absolutely. We welcome cooperation with translation agencies and language service providers that need a reliable translation partner. We aim to support our partners with competitive project-based pricing, dependable communication, and delivery schedules aligned with their requirements."],
+  ["Can I request a sample translation before placing an order?","Yes. Subject to project requirements and prior agreement, we may provide a sample translation so you can evaluate our quality and suitability before proceeding with a larger assignment. Contact our team to discuss the available options."],
+  ["How do you protect the confidentiality of my documents?","We treat client documents and information with professional discretion. Confidentiality requirements and any necessary arrangements can be discussed and agreed upon before work begins. Please inform us if your project requires a non-disclosure agreement (NDA) or specific security procedures."],
+  ["What file formats do you accept?","We can assess a variety of common file formats, including Word documents, PDFs, PowerPoint presentations, Excel files, and audio or video files. Please share your files or describe their format so we can confirm the most suitable workflow for your project."],
+  ["How can I get started with Qurtoba Translation Services?","Getting started is simple. Contact us with your files, language requirements, service details, and deadline. Our team will review your request, provide a quotation, and coordinate the next steps once the scope and terms are agreed upon."]]
+};
+const FACTS=[["10+","years of experience in the translation market"],["15+","years of professional experience for each translator on the team"],["Human-led","medical translation by qualified medical doctors, without AI or machine translation"]];
+
+/* ===== helpers ===== */
+const esc=s=>String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+const P=(arr,cls)=>arr.map(t=>`<p${cls?` class="${cls}"`:""}>${esc(t)}</p>`).join("");
+const ICONS={
+ doc:'<path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4M9.5 12h6M9.5 16h6"/>',
+ med:'<rect x="4" y="4" width="16" height="16" rx="3"/><path d="M12 8v8M8 12h8"/>',
+ aud:'<path d="M4 11v2M8 8v8M12 5v14M16 8v8M20 11v2"/>',
+ vid:'<rect x="3" y="6" width="13" height="12" rx="2"/><path d="M16 10l5-3v10l-5-3z"/>',
+ web:'<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/>',
+ pro:'<path d="M5 11l4 4 10-10"/><path d="M5 20h14"/>',
+ pm:'<rect x="3" y="4" width="5" height="16" rx="1"/><rect x="10" y="4" width="5" height="10" rx="1"/><rect x="17" y="4" width="4" height="13" rx="1"/>',
+ multi:'<path d="M4 5h10v7H8l-4 3z"/><path d="M10 14v3h6l4 3v-9h-4"/>',
+ check:'<path d="M5 12.5l4.5 4.5L19 7.5"/>'};
+const ico=n=>`<svg class="ico" viewBox="0 0 24 24" aria-hidden="true">${ICONS[n]}</svg>`;
+const navLinks=p=>[["about","About"],["services","Services"],["why","Why Qurtoba"],["faq","FAQs"],["contact","Contact"]].map(([k,l])=>`<a href="#${p}-${k}" data-go>${l}</a>`).join("");
+const faq=()=>`<div class="faq">${D.faq.map(([q,a])=>`<details><summary>${esc(q)}</summary><p>${esc(a)}</p></details>`).join("")}</div>`;
+const contactBox=()=>`<div class="cbox">
+  <div class="crow"><span class="cl">Email</span><span class="cv">${EMAIL}</span><span class="cact"><button type="button" data-copy="${EMAIL}">Copy</button><a href="mailto:${EMAIL}">Write</a></span></div>
+  <div class="crow"><span class="cl">WhatsApp</span><span class="cv">${WA}</span><span class="cact"><button type="button" data-copy="${WA}">Copy</button><a href="https://wa.me/${WA.replace(/\D/g,"")}" target="_blank" rel="noopener">Open</a></span></div>
+  <div class="soc"><a href="${LINKS.fb}" target="_blank" rel="noopener">Facebook</a><a href="${LINKS.li}" target="_blank" rel="noopener">LinkedIn</a><a href="${LINKS.ig}" target="_blank" rel="noopener">Instagram</a></div></div>`;
+const form=p=>`<form class="qf" data-form novalidate>
+  <h3>Request a quotation</h3>
+  <p class="hint">Send your files along with the source and target languages, required services, and preferred deadline.</p>
+  <label for="${p}-files">Files<input id="${p}-files" type="file" multiple></label>
+  <div class="two"><label for="${p}-src">Source language<input id="${p}-src" type="text" placeholder="For example, Arabic"></label>
+  <label for="${p}-tgt">Target language<input id="${p}-tgt" type="text" placeholder="For example, English"></label></div>
+  <label for="${p}-svc">Required service<select id="${p}-svc"><option value="">Choose a service</option>${D.services.map(s=>`<option>${esc(s.t)}</option>`).join("")}</select></label>
+  <div class="two"><label for="${p}-dl">Preferred deadline<input id="${p}-dl" type="date"></label>
+  <label for="${p}-em">Your email<input id="${p}-em" type="email" placeholder="name@company.com"></label></div>
+  <button class="btn" type="submit">Request a quotation</button>
+  <p class="fstatus" role="status" aria-live="polite"></p></form>`;
+const svcDesc=s=>`<p class="d">${esc(s.d)}</p><p class="ex"><b>${esc(s.l)}</b> ${esc(s.e)}</p>`;
+const WA_URL="https://wa.me/"+WA.replace(/\D/g,"");
+
+/* ===== A. Premium Corporate ===== */
+function renderA(){const p="a";return `
+<div class="a-util"><div class="w"><span>${EMAIL}</span><span>WhatsApp ${WA}</span></div></div>
+<header class="a-nav nav"><div class="w a-navin">
+  <a class="a-logo" href="#a-top" data-top aria-label="Qurtoba Translation Services, back to top"><svg viewBox="0 0 28 34" width="26" height="32" aria-hidden="true"><path d="M3 32V13a11 11 0 0 1 22 0v19" fill="none" stroke="currentColor" stroke-width="2"/><path d="M9 32V14a5 5 0 0 1 10 0v18" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><span class="a-lt"><b>Qurtoba</b><small>Translation Services</small></span></a>
+  <nav class="a-links" aria-label="Primary">${navLinks(p)}</nav>
+  <a class="btn a-navcta" href="#a-contact" data-go>Request a quote</a>
+  <button class="navbtn" type="button" aria-label="Menu" aria-expanded="false"><i></i><i></i><i></i></button>
+</div></header>
+<section class="a-hero dk"><div class="w a-herogrid">
+  <div><h1>${esc(D.welcome)}</h1><p class="a-tag">${esc(D.years)}</p><p class="a-lead">${esc(D.intro[0])}</p>
+   <div class="btns"><a class="btn gold" href="#a-contact" data-go>Request a quotation</a><a class="btn ghost" href="#a-services" data-go>Our services</a></div></div>
+  <div class="a-vis"><svg viewBox="0 0 360 440" role="img" aria-label="Decorative arch with the Arabic spelling of Qurtoba">
+    <path class="s1" d="M20 430V200a160 160 0 0 1 320 0V430Z"/><path class="s2" d="M52 430V204a128 128 0 0 1 256 0V430Z"/><path class="s3" d="M84 430V208a96 96 0 0 1 192 0V430Z"/>
+    <text class="ar" x="180" y="268" text-anchor="middle" lang="ar">قرطبة</text><text class="la" x="180" y="322" text-anchor="middle">Qurtoba</text>
+    <g class="gl"><text x="40" y="76">Aa</text><text x="298" y="76">文</text><text x="166" y="26">é</text></g></svg></div>
+</div></section>
+<div class="a-facts"><div class="w"><div class="a-fgrid">${FACTS.map(f=>`<div class="a-fact"><b>${esc(f[0])}</b><span>${esc(f[1])}</span></div>`).join("")}</div></div></div>
+<section class="sec" id="a-intro"><div class="w a-two"><div><h2>Introduction</h2><p class="a-quote">${esc(D.close)}</p></div><div class="a-body">${P(D.intro.slice(1))}</div></div></section>
+<section class="sec a-band" id="a-about"><div class="w a-two"><div><h2>About Us</h2><p class="a-quote">${esc(D.tagline)}</p></div><div class="a-body">${P(D.about)}</div></div></section>
+<section class="sec a-navy dk" id="a-mv"><div class="w a-mv"><div><h2>Our Mission</h2>${P(D.mission)}</div><div><h2>Our Vision</h2>${P(D.vision)}</div></div></section>
+<section class="sec" id="a-values"><div class="w"><h2>Our Values</h2><div class="a-vals">${D.values.map(v=>`<article class="a-val"><h3>${esc(v[0])}</h3><p>${esc(v[1])}</p></article>`).join("")}<article class="a-val close"><p>${esc(D.valuesClose)}</p></article></div></div></section>
+<section class="sec a-band" id="a-services"><div class="w"><h2>Our Translation Services</h2><div class="a-sintro">${P(D.svcIntro)}</div>
+  <div class="a-svc">${D.services.map(s=>`<article class="a-card"><span class="a-ico">${ico(s.i)}</span><h3>${esc(s.t)}</h3>${svcDesc(s)}</article>`).join("")}</div></div></section>
+<section class="sec" id="a-why"><div class="w"><h2>Why Choose Qurtoba?</h2><div class="a-why">${D.why.map(w=>`<div>${ico("check")}<h3>${esc(w[0])}</h3><p>${esc(w[1])}</p></div>`).join("")}</div></div></section>
+<section class="sec a-navy dk" id="a-work"><div class="w a-cta"><div><h2>Let’s Work Together</h2><p>${esc(D.coop)}</p><p class="strong">${esc(D.coopCta)}</p></div>
+  <div class="btns"><a class="btn gold" href="#a-contact" data-go>Request a quotation</a><a class="btn ghost" href="${WA_URL}" target="_blank" rel="noopener">WhatsApp us</a></div></div></section>
+<section class="sec" id="a-faq"><div class="w a-faqgrid"><h2>Frequently Asked Questions (FAQs)</h2>${faq()}</div></section>
+<section class="sec a-band" id="a-contact"><div class="w a-contact"><div><h2>Ready to start your next project?</h2><h3 class="sm">Contact US</h3><p>${esc(D.contactIntro)}</p>${contactBox()}</div>${form(p)}</div></section>
+<footer class="a-foot dk"><div class="w"><b>Qurtoba Translation Services</b><span>${esc(D.valuesClose.replace("Qurtoba Translation Services — ",""))}</span></div></footer>`}
+
+/* ===== wiring ===== */
+const RM=matchMedia("(prefers-reduced-motion: reduce)").matches;
+document.getElementById("dA").innerHTML=renderA();
+function closeNav(){document.querySelectorAll(".nav.open").forEach(n=>{n.classList.remove("open");const b=n.querySelector(".navbtn");if(b)b.setAttribute("aria-expanded","false")})}
+document.addEventListener("click",e=>{
+  const go=e.target.closest("[data-go]");
+  if(go){e.preventDefault();const el=document.getElementById(go.getAttribute("href").slice(1));if(el)el.scrollIntoView({behavior:RM?"auto":"smooth",block:"start"});closeNav();return}
+  if(e.target.closest("[data-top]")){e.preventDefault();window.scrollTo({top:0,behavior:RM?"auto":"smooth"});closeNav();return}
+  const nb=e.target.closest(".navbtn");if(nb){const nav=nb.closest(".nav");const o=nav.classList.toggle("open");nb.setAttribute("aria-expanded",String(o));return}
+  const cp=e.target.closest("[data-copy]");
+  if(cp){const txt=cp.dataset.copy,val=cp.closest(".crow").querySelector(".cv");
+    const ok=()=>{cp.textContent="Copied";setTimeout(()=>cp.textContent="Copy",1600)};
+    const fb=()=>{const r=document.createRange();r.selectNodeContents(val);const s=getSelection();s.removeAllRanges();s.addRange(r);cp.textContent="Selected";setTimeout(()=>cp.textContent="Copy",1600)};
+    try{navigator.clipboard.writeText(txt).then(ok,fb)}catch(_){fb()}return}
+});
+document.addEventListener("submit",e=>{const f=e.target.closest("[data-form]");if(!f)return;e.preventDefault();
+  f.querySelector(".fstatus").textContent="Preview only. This form is not connected yet, so nothing was sent. Use the email or WhatsApp details to reach Qurtoba."});
+</script>
+</body>
+</html>
