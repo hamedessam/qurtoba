@@ -81,17 +81,10 @@ a,button,summary,input,select{-webkit-tap-highlight-color:transparent}
 .dA .a-links{display:flex;gap:26px;margin-left:auto;font-size:.9375rem}
 .dA .a-links a{color:var(--a-ink);text-decoration:none;padding-block:6px;border-bottom:1px solid transparent}
 .dA .a-links a:hover{border-color:var(--a-brass)}
-.dA .a-hero{background:linear-gradient(160deg,var(--a-navy),var(--a-navy2));color:var(--a-onnavy);padding-block:clamp(48px,7vw,92px) clamp(96px,11vw,148px)}
-.dA .a-herogrid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(24px,5vw,72px);align-items:center}
+.dA .a-hero{background:linear-gradient(90deg,rgba(8,20,40,.82) 0%,rgba(8,20,40,.62) 42%,rgba(8,20,40,0) 74%),url(images/hero-desktop.jpg) center/cover no-repeat var(--a-navy);color:var(--a-onnavy);padding-block:clamp(48px,7vw,92px) clamp(96px,11vw,148px)}
+.dA .a-herogrid{display:grid;grid-template-columns:minmax(0,610px);align-items:center;min-height:400px}
 .dA .a-tag{margin-top:22px;color:var(--a-brasslt);font-family:Newsreader,Georgia,serif;font-style:italic;font-size:1.3rem;line-height:1.35}
 .dA .a-lead{margin-top:18px;color:var(--a-onnavy-mut);max-width:58ch}
-.dA .a-vis svg{display:block;width:100%;max-width:370px;height:auto;margin-inline:auto}
-.dA .a-vis .s1{fill:none;stroke:var(--a-brasslt);stroke-width:1.5;opacity:.45}
-.dA .a-vis .s2{fill:none;stroke:var(--a-brasslt);stroke-width:1.5;opacity:.75}
-.dA .a-vis .s3{fill:rgba(255,255,255,.06);stroke:var(--a-brasslt);stroke-width:2}
-.dA .a-vis .ar{font-family:Amiri,"Noto Naskh Arabic",serif;font-size:58px;fill:var(--a-brasslt)}
-.dA .a-vis .la{font-family:Newsreader,Georgia,serif;font-style:italic;font-size:26px;fill:var(--a-onnavy)}
-.dA .a-vis .gl text{font-family:Newsreader,Georgia,serif;font-size:34px;fill:var(--a-onnavy-mut);opacity:.75}
 .dA .a-facts{margin-top:-68px;position:relative;z-index:2}
 .dA .a-fgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));background:var(--a-surf);border:1px solid var(--a-line);border-radius:6px;box-shadow:0 22px 44px -28px rgba(10,24,45,.55)}
 .dA .a-fact{padding:28px 32px}
@@ -155,7 +148,8 @@ a,button,summary,input,select{-webkit-tap-highlight-color:transparent}
   .dA .a-navcta,.dB .b-navcta,.dC .c-navcta{display:none}
   .dB .b-navin,.dA .a-navin,.dC .c-navin{gap:16px}
   .dA .a-herogrid,.dB .b-hgrid,.dA .a-two,.dA .a-faqgrid,.dA .a-contact,.dB .b-row,.dB .b-contact,.dC .c-hrow,.dC .c-intro,.dC .c-cgrid{grid-template-columns:minmax(0,1fr)}
-  .dA .a-vis svg{max-width:260px}
+  .dA .a-hero{background:linear-gradient(180deg,var(--a-navy) 0%,var(--a-navy) 52%,rgba(14,36,65,0) 86%),url(images/hero-mobile.jpg) 78% 100%/auto 400px no-repeat var(--a-navy);padding-bottom:calc(clamp(96px,11vw,148px) + 300px)}
+  .dA .a-herogrid{min-height:0}
   .dA .a-faqgrid h2,.dB .b-row>h2{position:static}
   .dA .a-cta,.dB .b-ctap{grid-template-columns:minmax(0,1fr)}
   .dA .a-mv,.dC .c-mv,.dB .b-two,.dA .a-sintro{grid-template-columns:minmax(0,1fr)}
@@ -310,10 +304,6 @@ function renderA(){const p="a";return `
 <section class="a-hero dk"><div class="w a-herogrid">
   <div><h1>${esc(D.welcome)}</h1><p class="a-tag">${esc(D.years)}</p><p class="a-lead">${esc(D.intro[0])}</p>
    <div class="btns"><a class="btn gold" href="#a-contact" data-go>Request a quotation</a><a class="btn ghost" href="#a-services" data-go>Our services</a></div></div>
-  <div class="a-vis"><svg viewBox="0 0 360 440" role="img" aria-label="Decorative arch with the Arabic spelling of Qurtoba">
-    <path class="s1" d="M20 430V200a160 160 0 0 1 320 0V430Z"/><path class="s2" d="M52 430V204a128 128 0 0 1 256 0V430Z"/><path class="s3" d="M84 430V208a96 96 0 0 1 192 0V430Z"/>
-    <text class="ar" x="180" y="268" text-anchor="middle" lang="ar">قرطبة</text><text class="la" x="180" y="322" text-anchor="middle">Qurtoba</text>
-    <g class="gl"><text x="40" y="76">Aa</text><text x="298" y="76">文</text><text x="166" y="26">é</text></g></svg></div>
 </div></section>
 <div class="a-facts"><div class="w"><div class="a-fgrid">${FACTS.map(f=>`<div class="a-fact"><b>${esc(f[0])}</b><span>${esc(f[1])}</span></div>`).join("")}</div></div></div>
 <section class="sec" id="a-intro"><div class="w a-two"><div><h2>Introduction</h2><p class="a-quote">${esc(D.close)}</p></div><div class="a-body">${P(D.intro.slice(1))}</div></div></section>
