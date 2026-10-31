@@ -14,3 +14,4 @@ Static homepage (Direction A, "Ink & Brass"). No build step: `index.html` plus t
 - Page text comes from the client's requirements document.
 - Fonts load from Google Fonts (Newsreader and Public Sans).
 - Hero image: `images/hero-desktop.jpg` (wide screens) and `images/hero-mobile.jpg` (phones). To change it, replace these two files with the same names, or edit the `url(...)` lines of `.a-hero` in `index.html`.
+- Logo: `images/logo.png` (header). Replace the file with the same name to change it.

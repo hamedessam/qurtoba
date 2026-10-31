@@ -73,11 +73,9 @@ a,button,summary,input,select{-webkit-tap-highlight-color:transparent}
 .dA .a-util{background:var(--a-navy);color:var(--a-onnavy-mut);font-size:.8125rem}
 .dA .a-util .w{display:flex;justify-content:space-between;gap:16px;padding-block:8px}
 .dA .a-nav{position:sticky;top:calc(var(--sw) + env(safe-area-inset-top,0px));z-index:40;background:var(--a-surf);border-bottom:1px solid var(--a-line)}
-.dA .a-navin{display:flex;align-items:center;gap:28px;min-height:70px}
-.dA .a-logo{display:flex;align-items:center;gap:10px;color:var(--a-ink);text-decoration:none}
-.dA .a-logo svg{color:var(--a-brass)}
-.dA .a-lt b{display:block;font-family:Newsreader,Georgia,serif;font-weight:600;font-size:1.5rem;line-height:1}
-.dA .a-lt small{display:block;margin-top:3px;font-size:.6875rem;color:var(--a-mut);letter-spacing:.04em}
+.dA .a-navin{display:flex;align-items:center;gap:28px;min-height:96px;padding-block:8px}
+.dA .a-logo{display:flex;align-items:center;text-decoration:none}
+.dA .a-logo img{display:block;height:80px;width:auto}
 .dA .a-links{display:flex;gap:26px;margin-left:auto;font-size:.9375rem}
 .dA .a-links a{color:var(--a-ink);text-decoration:none;padding-block:6px;border-bottom:1px solid transparent}
 .dA .a-links a:hover{border-color:var(--a-brass)}
@@ -162,6 +160,7 @@ a,button,summary,input,select{-webkit-tap-highlight-color:transparent}
   .dA .a-facts{margin-top:-52px}
 }
 @media (max-width:600px){
+  .dA .a-logo img{height:62px}
   .dA .a-svc,.dA .a-vals,.dA .a-why,.dB .b-why,.dC .c-why{grid-template-columns:minmax(0,1fr)}
   .qf .two{grid-template-columns:minmax(0,1fr)}
   .ngrid{grid-template-columns:minmax(0,1fr)}
@@ -296,7 +295,7 @@ const WA_URL="https://wa.me/"+WA.replace(/\D/g,"");
 function renderA(){const p="a";return `
 <div class="a-util"><div class="w"><span>${EMAIL}</span><span>WhatsApp ${WA}</span></div></div>
 <header class="a-nav nav"><div class="w a-navin">
-  <a class="a-logo" href="#a-top" data-top aria-label="Qurtoba Translation Services, back to top"><svg viewBox="0 0 28 34" width="26" height="32" aria-hidden="true"><path d="M3 32V13a11 11 0 0 1 22 0v19" fill="none" stroke="currentColor" stroke-width="2"/><path d="M9 32V14a5 5 0 0 1 10 0v18" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><span class="a-lt"><b>Qurtoba</b><small>Translation Services</small></span></a>
+  <a class="a-logo" href="#a-top" data-top aria-label="Qurtoba Translation Services, back to top"><img src="images/logo.png" alt="Qurtoba Translation Services" width="125" height="80"></a>
   <nav class="a-links" aria-label="Primary">${navLinks(p)}</nav>
   <a class="btn a-navcta" href="#a-contact" data-go>Request a quote</a>
   <button class="navbtn" type="button" aria-label="Menu" aria-expanded="false"><i></i><i></i><i></i></button>
